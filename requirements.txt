@@ -1,0 +1,18 @@
+# --- Piece 1: ML prediction ---
+pandas
+numpy
+xgboost
+lightgbm
+scikit-learn
+shap
+matplotlib
+prophet
+ollama
+
+# peice 3 : RAG
+chromadb
+sentence-transformers
+pypdf
+
+# piece 5 : MCP
+mcp[cli]
