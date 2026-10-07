@@ -1,0 +1,67 @@
+/* ============================================================
+   DESIGN TOKENS
+   Grounded in the subject: Om Traders is a bookstall/stationery
+   shop. The palette and structure borrow from a physical ledger
+   book (ruled paper, ink, hairline rules) rather than a generic
+   SaaS dashboard - fitting for a business that lives on books,
+   notebooks and paper.
+   ============================================================ */
+:root {
+  /* Color */
+  --paper: #F6F1E4;         /* warm ledger-paper background */
+  --paper-alt: #EFE7D2;     /* alternating row / panel wash */
+  --paper-line: #DCD0AE;    /* ruled-line hairlines */
+  --ink: #262A3B;           /* primary text, near ink-black */
+  --ink-soft: #5D6072;      /* secondary / muted text */
+  --marigold: #BD8A2E;      /* accent - marigold/turmeric, common on Indian shop signage */
+  --marigold-deep: #8F6720;
+  --risk-low: #4B7A5B;
+  --risk-medium: #B8862F;
+  --risk-high: #A6402A;
+  --stamp-ink: #7A2E2E;     /* "DRAFT" stamp red-ink color */
+
+  /* Type */
+  --font-display: "Source Serif 4", Georgia, serif;
+  --font-body: "Inter", -apple-system, sans-serif;
+
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root { height: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-image: repeating-linear-gradient(
+    to bottom, transparent, transparent 41px,
+    var(--paper-line) 41px, var(--paper-line) 42px
+  );
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  margin: 0;
+  color: var(--ink);
+}
+
+button { font-family: inherit; cursor: pointer; }
+a { color: inherit; }
+
+::selection { background: var(--marigold); color: var(--paper); }
+
+:focus-visible {
+  outline: 2px solid var(--marigold-deep);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
