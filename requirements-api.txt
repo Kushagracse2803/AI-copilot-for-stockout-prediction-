@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+pandas
+numpy
+xgboost
+ollama
+chromadb
+sentence-transformers
+pypdf
+mcp[cli]
